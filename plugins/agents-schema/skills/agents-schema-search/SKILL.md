@@ -29,6 +29,10 @@ Required first query:
 SELECT * FROM AGENTS.ROOT ORDER BY provider, key;
 ```
 
+On ClickHouse, identifiers are case-sensitive and the schema is a lowercase
+database — use `SELECT * FROM agents.root ORDER BY provider, key;` (the same
+applies to the provider tables: `agents.dbt_model`, not `AGENTS.DBT_MODEL`).
+
 Then follow the provider guidance returned in the `content` column.
 
 If no rows are returned, or the AGENTS schema or the AGENTS.ROOT table is not

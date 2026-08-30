@@ -10,6 +10,7 @@ from .config import ConfigError
 
 DBT_ADAPTER_PACKAGE_BY_PROFILE_TYPE = {
     "bigquery": "dbt-bigquery",
+    "clickhouse": "dbt-clickhouse",
     "databricks": "dbt-databricks",
     "snowflake": "dbt-snowflake",
 }

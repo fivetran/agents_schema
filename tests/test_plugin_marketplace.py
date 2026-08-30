@@ -34,7 +34,9 @@ class PluginMarketplaceTests(unittest.TestCase):
         connection_references = {
             path.stem for path in (skill_root / "connect-warehouse" / "references").glob("*.md")
         }
-        self.assertEqual(connection_references, {"snowflake", "bigquery", "databricks"})
+        self.assertEqual(
+            connection_references, {"snowflake", "bigquery", "databricks", "clickhouse"}
+        )
 
     def test_claude_marketplace_installs_same_plugin(self):
         marketplace = json.loads(CLAUDE_MARKETPLACE_PATH.read_text())
